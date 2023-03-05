@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-h: 60px;
+  --main-h: calc(100vh - var(--header-h));
+}
+
+.info {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+}
+
+.navList > li {
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity));
+}
+
+.navList > li:is(:active, :focus) {
+  color: white;
+  background: #000;
+}
