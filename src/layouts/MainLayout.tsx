@@ -15,7 +15,7 @@ const MainLayout: NextPage<{
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="h-main bg-grid">{children}</main>
+      <main className="min-h-main bg-grid">{children}</main>
     </>
   );
 };

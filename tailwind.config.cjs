@@ -3,7 +3,7 @@ const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      height: {
+      minHeight: {
         header: "var(--header-h)",
         main: "var(--main-h)",
       },

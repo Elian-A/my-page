@@ -6,7 +6,7 @@ import { skill, interests, technology, greenSquares } from "../assets/";
 const Home: NextPage = () => {
   return (
     <MainLayout title="Elian Avalos | Home">
-      <div className="grid h-full place-content-center px-5">
+      <div className="grid min-h-main place-content-center px-5">
         <div className="grid gap-8 bg-white p-5 shadow-2xl">
           <div className="relative aspect-square w-[120px] overflow-auto rounded-full">
             <Image

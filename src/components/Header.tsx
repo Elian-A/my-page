@@ -25,7 +25,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => setToggle(!toggle);
   return (
-    <header className="relative flex h-header items-center px-5 shadow-sm">
+    <header className="relative flex min-h-header items-center px-5 shadow-sm">
       <button onClick={handleToggle}>
         <MenuSvg />
       </button>
@@ -34,7 +34,7 @@ const Header = () => {
           toggle ? "" : "-translate-x-full"
         } absolute top-0 left-0 z-10 h-screen w-[80%] bg-white shadow-lg transition-all`}
       >
-        <div className="ml-5 flex h-header items-center">
+        <div className="ml-5 flex min-h-header items-center">
           <button onClick={handleToggle}>
             <CloseSvg />
           </button>
