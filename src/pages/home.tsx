@@ -1,5 +1,6 @@
 import { type NextPage } from "next";
 import Image from "next/image";
+import { EmailSvg, LocationSvg } from "~/components/Svgs";
 import MainLayout from "~/layouts/MainLayout";
 import { skill, interests, technology, greenSquares } from "../assets/";
 
@@ -52,13 +53,14 @@ const Home: NextPage = () => {
           </ul>
           <ul className="h-0 w-0 overflow-hidden sm:h-full sm:w-full">
             <li>
-              <p>
-                <i>i </i>Paraguay, Encarnacion
+              <p className="flex items-center gap-1">
+                <LocationSvg /> Paraguay, Encarnacion
               </p>
             </li>
             <li>
-              <p className="min-w-min text-ellipsis">
-                <i>i </i>elian.emanuel.avalos@gmail.com
+              <p className="flex items-center gap-1">
+                <EmailSvg />
+                elian.emanuel.avalos@gmail.com
               </p>
             </li>
           </ul>
