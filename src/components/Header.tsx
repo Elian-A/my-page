@@ -11,14 +11,18 @@ import {
 } from "./Svgs";
 
 const navItems = [
-  { title: "home", Svg: HomeSvg, href: "/home" },
-  { title: "readings", Svg: BookSvg, href: "/readings" },
-  { title: "routines", Svg: DiarySvg, href: "/routines" },
-  { title: "projects", Svg: CompoundSvg, href: "/projects" },
+  { title: "home", SvgComponent: HomeSvg, href: "/home" },
+  //{ title: "readings", Svg: BookSvg, href: "/readings" },
+  //{ title: "routines", Svg: DiarySvg, href: "/routines" },
+  { title: "projects", SvgComponent: CompoundSvg, href: "/projects" },
 ];
 
 const socialItems = [
-  { title: "Github", Svg: GitHubSvg, href: "https://github.com/Elian-A" },
+  {
+    title: "Github",
+    SvgComponent: GitHubSvg,
+    href: "https://github.com/Elian-A",
+  },
 ];
 
 const Header = () => {
@@ -41,10 +45,10 @@ const Header = () => {
         </div>
         <nav className="grid gap-6 px-3 pt-6">
           <ul className="navList grid gap-3">
-            {navItems.map(({ href, Svg, title }) => (
+            {navItems.map(({ href, SvgComponent, title }) => (
               <li key={title} className="text-xl">
                 <Link href={href} className="flex gap-2">
-                  <Svg />
+                  <SvgComponent />
                   {title}
                 </Link>
               </li>
@@ -53,10 +57,10 @@ const Header = () => {
           <div>
             <h3 className="text-neutral-500">Social</h3>
             <ul className="navList grid gap-3 pt-3">
-              {socialItems.map(({ href, Svg, title }) => (
+              {socialItems.map(({ href, SvgComponent, title }) => (
                 <li key={title} className="text-xl">
                   <Link className="flex gap-2" href={href}>
-                    <Svg />
+                    <SvgComponent />
                     {title}
                   </Link>
                 </li>
