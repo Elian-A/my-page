@@ -10,7 +10,10 @@
 const config = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [{ hostname: "images.unsplash.com" }],
+    remotePatterns: [
+      { hostname: "github.com" },
+      { hostname: "res.cloudinary.com" },
+    ],
   },
   redirects: async () => [
     { source: "/", destination: "/home", permanent: true },
