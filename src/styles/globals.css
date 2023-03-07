@@ -24,3 +24,10 @@
   color: white;
   background: #000;
 }
+
+.projectsGrid {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 400px));
+}
