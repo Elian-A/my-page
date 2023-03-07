@@ -10,8 +10,22 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Example {
+model Project {
+    id          String   @id @default(cuid())
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+    title       String
+    description String
+    tags        Tag[]
+    warning     String?
+    imageUrl    String
+    githubUrl   String
+    demoUrl     String
+}
+
+model Tag {
     id        String   @id @default(cuid())
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+    name      String
+    Project   Project? @relation(fields: [projectId], references: [id])
+    projectId String?
 }
