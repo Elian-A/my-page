@@ -1,8 +1,14 @@
 import { type NextPage } from "next";
 import Image from "next/image";
-import { EmailSvg, LocationSvg } from "~/components/Svgs";
+import {
+  EmailSvg,
+  InterestsSvg,
+  LocationSvg,
+  SkillSvg,
+  TechnologySvg,
+} from "~/components/Svgs";
 import MainLayout from "~/layouts/MainLayout";
-import { skill, interests, technology, greenSquares } from "../assets/";
+import greenSquares from "../assets/green-squares.webp";
 
 const Home: NextPage = () => {
   return (
@@ -26,7 +32,7 @@ const Home: NextPage = () => {
             <li>
               <p className="info">
                 <span className="flex min-w-max items-center gap-1">
-                  <Image src={skill} alt="skill icon" />
+                  <SkillSvg />
                   <b>Skills: </b>
                 </span>
                 Typescript, React
@@ -35,7 +41,7 @@ const Home: NextPage = () => {
             <li>
               <p className="info">
                 <span className="flex min-w-max items-center gap-1 self-start">
-                  <Image src={interests} alt="interests icon" />
+                  <InterestsSvg />
                   <b>Interests: </b>
                 </span>
                 State managment, Science, Artificial Inteligence
@@ -44,7 +50,7 @@ const Home: NextPage = () => {
             <li>
               <p className="info gap-3">
                 <span className="flex min-w-max items-center gap-1 self-start">
-                  <Image src={technology} alt="tech icon" />
+                  <TechnologySvg />
                   <b>Technologies:</b>
                 </span>
                 Tanstack query, Next, Trpc, Zod, Prisma, Tailwind
