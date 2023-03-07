@@ -36,7 +36,7 @@ const Header = () => {
       <div
         className={`${
           toggle ? "" : "-translate-x-full"
-        } absolute top-0 left-0 z-10 h-screen w-[80%] bg-white shadow-lg transition-all`}
+        } absolute top-0 left-0 z-10 h-screen w-1/2 bg-white shadow-lg transition-all md:w-[30%] lg:w-[20%]`}
       >
         <div className="ml-5 flex min-h-header items-center">
           <button onClick={handleToggle}>
